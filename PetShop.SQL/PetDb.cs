@@ -109,7 +109,7 @@ namespace PetShop.SQL
                 {
                     orderedPetList = from pet in _petList orderby pet.Price ascending select pet;
                 }
-                else if (number == 2)
+                else
                 {
                      orderedPetList = from pet in _petList orderby pet.Price descending select pet;
                 }
@@ -120,7 +120,7 @@ namespace PetShop.SQL
 
         public IEnumerable<Pet> GetCheapestPets()
         {
-            var filteredCheapestPets = from pet in _petList orderby pet.Price descending select pet;
+            var filteredCheapestPets = from pet in _petList orderby pet.Price ascending select pet;
             return filteredCheapestPets.ToList().Take(5);
         }
 

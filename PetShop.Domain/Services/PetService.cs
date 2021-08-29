@@ -24,7 +24,12 @@ namespace PetShop.Domain.Services
 
         public List<Pet> GetFilteredPetsByType(string idPetType)
         {
-            return _petRepository.FilterPetsByType(idPetType).ToList();
+            if (Int32.TryParse(idPetType, out int id))
+            {
+                return _petRepository.FilterPetsByType(idPetType).ToList();
+            }
+
+            return null;
         }
 
         public Pet NewPet(string name, PetType type, string birthdate, string solddate, string color, string price)
@@ -39,8 +44,6 @@ namespace PetShop.Domain.Services
                 SoldDate  =  new DateTime(Convert.ToInt32(formatedSolddate[2]), Convert.ToInt32(formatedSolddate[1]), Convert.ToInt32(formatedSolddate[0])),
                 Color = color,
                 Price = double.Parse(price)
-
-
             };
         }
 

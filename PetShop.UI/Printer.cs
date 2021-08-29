@@ -156,30 +156,38 @@ namespace PetShop.UI
             ShowPets(_petService.GetPets());
             var idForEdit = PrintIdFind();
             var petToEdit = _petService.FindPetById(idForEdit);
-            Console.WriteLine(
-                $"Pet to be edited {petToEdit.Name} of color {petToEdit.Color} and type {petToEdit.Type.Name}");
-            var newPetName = AskQuestion("Enter new name");
-            var newPetType = AskQuestion("Enter new type");
-            var newBirthDate = AskQuestion("Enter new birthdate ex.(31/05/2021)");
-            var newSoldDate = AskQuestion("Enter new sold date ex.(31/05/2021)");
-            var newColor = AskQuestion("Enter new color");
-            var newPrice = AskQuestion("Enter new price");
-            string[] formatedBrithdate = newBirthDate.Split("/");
-            string[] formatedSolddate = newSoldDate.Split("/");
-            var updatedPet = _petService.UpdatePet(
-                new Pet
-                {
-                    Id = idForEdit,
-                    Name = newPetName,
-                    Type = _petTypeService.UpdatePetType(petToEdit.Type.Id, newPetType),
-                    Birthdate = new DateTime(Convert.ToInt32(formatedBrithdate[2]),
-                        Convert.ToInt32(formatedBrithdate[1]), Convert.ToInt32(formatedBrithdate[0])),
-                    SoldDate = new DateTime(Convert.ToInt32(formatedSolddate[2]), Convert.ToInt32(formatedSolddate[1]),
-                        Convert.ToInt32(formatedSolddate[0])),
-                    Color = newColor,
-                    Price = double.Parse(newPrice)
-                });
-            CheckUpdated(updatedPet);
+            if (petToEdit != null)
+            {
+                Console.WriteLine(
+                    $"Pet to be edited {petToEdit.Name} of color {petToEdit.Color} and type {petToEdit.Type.Name}");
+                var newPetName = AskQuestion("Enter new name");
+                var newPetType = AskQuestion("Enter new type");
+                var newBirthDate = AskQuestion("Enter new birthdate ex.(31/05/2021)");
+                var newSoldDate = AskQuestion("Enter new sold date ex.(31/05/2021)");
+                var newColor = AskQuestion("Enter new color");
+                var newPrice = AskQuestion("Enter new price");
+                string[] formatedBrithdate = newBirthDate.Split("/");
+                string[] formatedSolddate = newSoldDate.Split("/");
+                var updatedPet = _petService.UpdatePet(
+                    new Pet
+                    {
+                        Id = idForEdit,
+                        Name = newPetName,
+                        Type = _petTypeService.UpdatePetType(petToEdit.Type.Id, newPetType),
+                        Birthdate = new DateTime(Convert.ToInt32(formatedBrithdate[2]),
+                            Convert.ToInt32(formatedBrithdate[1]), Convert.ToInt32(formatedBrithdate[0])),
+                        SoldDate = new DateTime(Convert.ToInt32(formatedSolddate[2]), Convert.ToInt32(formatedSolddate[1]),
+                            Convert.ToInt32(formatedSolddate[0])),
+                        Color = newColor,
+                        Price = double.Parse(newPrice)
+                    });
+                CheckUpdated(updatedPet);
+            }
+            else
+            {
+                Console.WriteLine("Pet was not found");
+            }
+            
         }
 
         #endregion
