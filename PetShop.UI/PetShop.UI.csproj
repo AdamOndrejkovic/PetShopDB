@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="ConsoleTables" Version="2.4.2" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0-preview.7.21377.19" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0-preview.7.21377.19" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\PetShop.Core\PetShop.Core.csproj" />
+      <ProjectReference Include="..\PetShop.Domain\PetShop.Domain.csproj" />
+      <ProjectReference Include="..\PetShop.SQL\PetShop.SQL.csproj" />
+    </ItemGroup>
+
+</Project>
