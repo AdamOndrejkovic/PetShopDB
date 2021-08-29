@@ -7,7 +7,7 @@ namespace PetShop.Domain.IRepositories
     {
         IEnumerable<Pet> ReadPets();
         IEnumerable<Pet> FilterPetsByType(string idPetType);
-        void CreatePet(Pet petToBeCreated);
+        Pet CreatePet(Pet petToBeCreated);
         Pet DeletePet(int idPet);
         Pet FindPetById(int idForEdit);
         Pet UpdatePet(Pet pet);

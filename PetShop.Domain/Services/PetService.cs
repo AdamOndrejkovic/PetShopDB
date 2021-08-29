@@ -47,9 +47,9 @@ namespace PetShop.Domain.Services
             };
         }
 
-        public void CreatePet(Pet petToBeCreated)
+        public Pet CreatePet(Pet petToBeCreated)
         {
-            _petRepository.CreatePet(petToBeCreated);
+            return _petRepository.CreatePet(petToBeCreated);
         }
 
         public Pet DeletePet(int idPet)

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\adamo\\RiderProjects\\PetShop\\PetShop.Core\\PetShop.Core.csproj",
+      "projectUniqueName": "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.Core\\PetShop.Core.csproj",
       "projectName": "PetShop.Core",
-      "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShop\\PetShop.Core\\PetShop.Core.csproj",
+      "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.Core\\PetShop.Core.csproj",
       "packagesPath": "C:\\Users\\adamo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\adamo\\RiderProjects\\PetShop\\PetShop.Core\\obj\\",
+      "outputPath": "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

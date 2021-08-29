@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VQOu4uGFmWXir7X3llaHsyPlwnUWQiL5wnKbi8wEfFJIdIi6IVDFekcR94yuY6UckWRwTy/1pUl9SYCXtHj+MA==",
+  "dgSpecHash": "UPl2wCx9jTyov+NvAt1j/yILcrhJxWoBwRiyt+53cxloUHZEO3iDsO+2tr4Xuv5ZoP+fl9UuWZZJxQakaJVkAQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\adamo\\RiderProjects\\PetShop\\PetShop.Core\\PetShop.Core.csproj",
+  "projectFilePath": "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.Core\\PetShop.Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

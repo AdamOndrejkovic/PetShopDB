@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "f7U5h/cAtvYcFKq4NL6V45JWCV2o8cqacflSssR7fh9x9491l8uUylHjGMIK2ZMGJSmENyYnr5EqJfXfIayUiw==",
+  "dgSpecHash": "V4jF9NySHldBKWPI5RTgfBw/KEZEOR5pWcOAGAlFAOAyA1EFvOebLi0Hqj3Bdp//um+G/GkBr+d0laFu+sRmsQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\adamo\\RiderProjects\\PetShop\\PetShop.UI\\PetShop.UI.csproj",
+  "projectFilePath": "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.UI\\PetShop.UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\adamo\\.nuget\\packages\\consoletables\\2.4.2\\consoletables.2.4.2.nupkg.sha512",
     "C:\\Users\\adamo\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0-preview.7.21377.19\\microsoft.extensions.dependencyinjection.6.0.0-preview.7.21377.19.nupkg.sha512",

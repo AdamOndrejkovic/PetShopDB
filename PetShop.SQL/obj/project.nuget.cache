@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1so/W9qEBbU+XAf8btnCcKYj5YRzDNQThBkOXiwhtlIdAp0cnUek7HX7ZFzIe8yY8X+jLUkah8NPbi8jo8UIDA==",
+  "dgSpecHash": "S3bNzwVyHuaVK2/8rlGezMLEy7IPQGhaCvfu/I3Z5vYDJ8K8GQHWDL7uDqmDNFRKtsg5QLE3/FkihlDclWKKlA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\adamo\\RiderProjects\\PetShop\\PetShop.SQL\\PetShop.SQL.csproj",
+  "projectFilePath": "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.SQL\\PetShop.SQL.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

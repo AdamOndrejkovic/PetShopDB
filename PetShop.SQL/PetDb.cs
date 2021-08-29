@@ -53,10 +53,11 @@ namespace PetShop.SQL
             return listToFilter;
         }
 
-        public void CreatePet(Pet petToBeCreated)
+        public Pet CreatePet(Pet petToBeCreated)
         {
             petToBeCreated.Id = _petId++;
             _petList.Add(petToBeCreated);
+            return petToBeCreated;
         }
 
         public Pet DeletePet(int idPet)
