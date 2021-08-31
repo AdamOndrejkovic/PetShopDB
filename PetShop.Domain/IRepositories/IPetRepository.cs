@@ -13,5 +13,6 @@ namespace PetShop.Domain.IRepositories
         Pet UpdatePet(Pet pet);
         List<Pet> SortByPrice(string sortOrder);
         IEnumerable<Pet> GetCheapestPets();
+        void Init();
     }
 }

@@ -34,7 +34,10 @@ namespace PetShop.RestAPI
             services.AddScoped<IPetTypeService, PetTypeService>();
             services.AddScoped<IPetRepository, PetDb>();
             services.AddScoped<IPetTypeRepository, PetDb>();
-            
+
+            var serviceProvider = services.BuildServiceProvider();
+            var setUp = serviceProvider.GetRequiredService<IPetRepository>();
+            setUp.Init();
             
             services.AddControllers();
             services.AddSwaggerGen(c =>

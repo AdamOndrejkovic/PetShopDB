@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using PetShop.Core.IServices;
@@ -14,22 +15,28 @@ namespace PetShop.RestAPI.Controllers
     public class PetsController : ControllerBase
     {
         private readonly IPetService _petService;
-        
+
         public PetsController(IPetService petService)
         {
             _petService = petService;
         }
-        
+
         [HttpGet]
         public IEnumerable<Pet> Get()
         {
             return _petService.GetPets();
         }
-        
+
         [HttpGet("{id}")]
-        public IEnumerable<Pet> Get(int id)
+        public ActionResult<Pet> Get(int id)
         {
-            return _petService.GetFilteredPetsByType(id.ToString());
+            var filteredPet = _petService.FindPetById(id);
+            if (filteredPet != null)
+            {
+                return filteredPet;
+            }
+
+            return BadRequest($"No pet was found with id: {id}. Try to use other id.");
         }
 
         [HttpPost]
@@ -39,7 +46,8 @@ namespace PetShop.RestAPI.Controllers
             {
                 return BadRequest("First name required");
             }
-           return _petService.CreatePet(petValue);
+
+            return _petService.CreatePet(petValue);
         }
 
         [HttpPut("{id}")]
@@ -50,7 +58,20 @@ namespace PetShop.RestAPI.Controllers
                 return BadRequest("Parameter Id and customer Id must be the same");
             }
 
-            return Ok();
+            return _petService.UpdatePet(pet);
+        }
+
+        [HttpDelete("{id}")]
+        public ActionResult<Pet> DeletePet(int id)
+        {
+            var deletedPet = _petService.DeletePet(id);
+
+            if (deletedPet == null)
+            {
+                return BadRequest("An error occurred. Your pet couldn't be deleted");
+            }
+
+            return deletedPet;
         }
     }
 }

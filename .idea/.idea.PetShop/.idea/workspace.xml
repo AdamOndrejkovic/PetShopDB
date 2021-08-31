@@ -8,111 +8,76 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a34d04cb-2ba0-411a-ae76-77fd0ee3fc5f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.PetShop/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.PetShop/.idea/aws.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PetShop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PetShop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Core/IServices/IPetService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Core/IServices/IPetService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Core/bin/Debug/net5.0/PetShop.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Core/bin/Debug/net5.0/PetShop.Core.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Core/bin/Debug/net5.0/PetShop.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Core/bin/Debug/net5.0/PetShop.Core.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Core/bin/Debug/net5.0/ref/PetShop.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Core/bin/Debug/net5.0/ref/PetShop.Core.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Core/obj/Debug/net5.0/PetShop.Core.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Core/obj/Debug/net5.0/PetShop.Core.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Core/obj/Debug/net5.0/PetShop.Core.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Core/obj/Debug/net5.0/PetShop.Core.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.Core/obj/Debug/net5.0/PetShop.Core.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Core/obj/Debug/net5.0/PetShop.Core.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Core/obj/Debug/net5.0/PetShop.Core.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Core/obj/Debug/net5.0/PetShop.Core.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Core/obj/Debug/net5.0/PetShop.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Core/obj/Debug/net5.0/PetShop.Core.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Core/obj/Debug/net5.0/PetShop.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Core/obj/Debug/net5.0/PetShop.Core.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Core/obj/Debug/net5.0/ref/PetShop.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Core/obj/Debug/net5.0/ref/PetShop.Core.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.Core/obj/PetShop.Core.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Core/obj/PetShop.Core.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetShop.Core/obj/PetShop.Core.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Core/obj/PetShop.Core.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.Core/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Core/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.Core/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Core/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.Core/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Core/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.Core/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Core/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.Domain/IRepositories/IPetRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Domain/IRepositories/IPetRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Domain/Services/PetService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Domain/Services/PetService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Domain/bin/Debug/net5.0/PetShop.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Domain/bin/Debug/net5.0/PetShop.Core.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Domain/bin/Debug/net5.0/PetShop.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Domain/bin/Debug/net5.0/PetShop.Core.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.Domain/bin/Debug/net5.0/PetShop.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Domain/bin/Debug/net5.0/PetShop.Domain.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.Domain/bin/Debug/net5.0/PetShop.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Domain/bin/Debug/net5.0/PetShop.Domain.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.Domain/bin/Debug/net5.0/ref/PetShop.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Domain/bin/Debug/net5.0/ref/PetShop.Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Domain/obj/Debug/net5.0/PetShop.Domain.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Domain/obj/Debug/net5.0/PetShop.Domain.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.Domain/obj/Debug/net5.0/PetShop.Domain.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Domain/obj/Debug/net5.0/PetShop.Domain.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.Domain/obj/Debug/net5.0/PetShop.Domain.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Domain/obj/Debug/net5.0/PetShop.Domain.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Domain/obj/Debug/net5.0/PetShop.Domain.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Domain/obj/Debug/net5.0/PetShop.Domain.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Domain/obj/Debug/net5.0/PetShop.Domain.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Domain/obj/Debug/net5.0/PetShop.Domain.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.Domain/obj/Debug/net5.0/PetShop.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Domain/obj/Debug/net5.0/PetShop.Domain.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.Domain/obj/Debug/net5.0/PetShop.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Domain/obj/Debug/net5.0/PetShop.Domain.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.Domain/obj/Debug/net5.0/ref/PetShop.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Domain/obj/Debug/net5.0/ref/PetShop.Domain.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.Domain/obj/PetShop.Domain.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Domain/obj/PetShop.Domain.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetShop.Domain/obj/PetShop.Domain.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Domain/obj/PetShop.Domain.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.Domain/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Domain/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.Domain/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Domain/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.Domain/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Domain/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.Domain/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.Domain/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Infrastructure/PetShop.Infrastructure.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Infrastructure/bin/Debug/net5.0/PetShop.Infrastructure.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Infrastructure/bin/Debug/net5.0/PetShop.Infrastructure.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Infrastructure/bin/Debug/net5.0/PetShop.Infrastructure.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Infrastructure/bin/Debug/net5.0/ref/PetShop.Infrastructure.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Infrastructure/obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Infrastructure/obj/Debug/net5.0/PetShop.Infrastructure.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Infrastructure/obj/Debug/net5.0/PetShop.Infrastructure.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Infrastructure/obj/Debug/net5.0/PetShop.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Infrastructure/obj/Debug/net5.0/PetShop.Infrastructure.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Infrastructure/obj/Debug/net5.0/PetShop.Infrastructure.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Infrastructure/obj/Debug/net5.0/PetShop.Infrastructure.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Infrastructure/obj/Debug/net5.0/PetShop.Infrastructure.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Infrastructure/obj/Debug/net5.0/PetShop.Infrastructure.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Infrastructure/obj/Debug/net5.0/PetShop.Infrastructure.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Infrastructure/obj/Debug/net5.0/ref/PetShop.Infrastructure.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Infrastructure/obj/PetShop.Infrastructure.csproj.nuget.dgspec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Infrastructure/obj/PetShop.Infrastructure.csproj.nuget.g.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Infrastructure/obj/PetShop.Infrastructure.csproj.nuget.g.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Infrastructure/obj/project.assets.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Infrastructure/obj/project.nuget.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Infrastructure/obj/project.packagespec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.Infrastructure/obj/rider.project.restore.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetShop.RestAPI/Controllers/PetsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.RestAPI/Controllers/PetsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetShop.RestAPI/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.RestAPI/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetShop.RestAPI/bin/Debug/net5.0/PetShop.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.RestAPI/bin/Debug/net5.0/PetShop.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetShop.RestAPI/bin/Debug/net5.0/PetShop.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.RestAPI/bin/Debug/net5.0/PetShop.Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetShop.RestAPI/bin/Debug/net5.0/PetShop.RestAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.RestAPI/bin/Debug/net5.0/PetShop.RestAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetShop.RestAPI/bin/Debug/net5.0/PetShop.RestAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.RestAPI/bin/Debug/net5.0/PetShop.RestAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetShop.RestAPI/bin/Debug/net5.0/PetShop.RestAPI.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.RestAPI/bin/Debug/net5.0/PetShop.RestAPI.runtimeconfig.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetShop.RestAPI/bin/Debug/net5.0/PetShop.SQL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.RestAPI/bin/Debug/net5.0/PetShop.SQL.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetShop.RestAPI/bin/Debug/net5.0/PetShop.SQL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.RestAPI/bin/Debug/net5.0/PetShop.SQL.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetShop.RestAPI/bin/Debug/net5.0/ref/PetShop.RestAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.RestAPI/bin/Debug/net5.0/ref/PetShop.RestAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetShop.RestAPI/obj/Debug/net5.0/PetShop.RestAPI.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.RestAPI/obj/Debug/net5.0/PetShop.RestAPI.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetShop.RestAPI/obj/Debug/net5.0/PetShop.RestAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.RestAPI/obj/Debug/net5.0/PetShop.RestAPI.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetShop.RestAPI/obj/Debug/net5.0/PetShop.RestAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.RestAPI/obj/Debug/net5.0/PetShop.RestAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetShop.RestAPI/obj/Debug/net5.0/PetShop.RestAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.RestAPI/obj/Debug/net5.0/PetShop.RestAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetShop.RestAPI/obj/Debug/net5.0/ref/PetShop.RestAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.RestAPI/obj/Debug/net5.0/ref/PetShop.RestAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetShop.RestAPI/obj/PetShop.RestAPI.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.RestAPI/obj/PetShop.RestAPI.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetShop.RestAPI/obj/PetShop.RestAPI.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.RestAPI/obj/PetShop.RestAPI.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetShop.RestAPI/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.RestAPI/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetShop.RestAPI/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.RestAPI/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetShop.RestAPI/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.RestAPI/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetShop.RestAPI/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.RestAPI/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.SQL/PetDb.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.SQL/PetDb.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.SQL/bin/Debug/net5.0/PetShop.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.SQL/bin/Debug/net5.0/PetShop.Core.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.SQL/bin/Debug/net5.0/PetShop.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.SQL/bin/Debug/net5.0/PetShop.Core.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.SQL/bin/Debug/net5.0/PetShop.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.SQL/bin/Debug/net5.0/PetShop.Domain.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.SQL/bin/Debug/net5.0/PetShop.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.SQL/bin/Debug/net5.0/PetShop.Domain.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.SQL/bin/Debug/net5.0/PetShop.SQL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.SQL/bin/Debug/net5.0/PetShop.SQL.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.SQL/bin/Debug/net5.0/PetShop.SQL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.SQL/bin/Debug/net5.0/PetShop.SQL.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.SQL/bin/Debug/net5.0/ref/PetShop.SQL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.SQL/bin/Debug/net5.0/ref/PetShop.SQL.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.SQL/obj/Debug/net5.0/PetShop.SQL.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.SQL/obj/Debug/net5.0/PetShop.SQL.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetShop.SQL/obj/Debug/net5.0/PetShop.SQL.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.SQL/obj/Debug/net5.0/PetShop.SQL.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.SQL/obj/Debug/net5.0/PetShop.SQL.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.SQL/obj/Debug/net5.0/PetShop.SQL.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.SQL/obj/Debug/net5.0/PetShop.SQL.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.SQL/obj/Debug/net5.0/PetShop.SQL.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.SQL/obj/Debug/net5.0/PetShop.SQL.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.SQL/obj/Debug/net5.0/PetShop.SQL.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.SQL/obj/Debug/net5.0/PetShop.SQL.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.SQL/obj/Debug/net5.0/PetShop.SQL.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.SQL/obj/Debug/net5.0/PetShop.SQL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.SQL/obj/Debug/net5.0/PetShop.SQL.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.SQL/obj/Debug/net5.0/PetShop.SQL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.SQL/obj/Debug/net5.0/PetShop.SQL.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.SQL/obj/Debug/net5.0/ref/PetShop.SQL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.SQL/obj/Debug/net5.0/ref/PetShop.SQL.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.SQL/obj/PetShop.SQL.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.SQL/obj/PetShop.SQL.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetShop.SQL/obj/PetShop.SQL.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.SQL/obj/PetShop.SQL.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.SQL/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.SQL/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.SQL/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.SQL/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.SQL/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.SQL/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.SQL/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.SQL/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.UI/bin/Debug/net5.0/PetShop.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.UI/bin/Debug/net5.0/PetShop.Core.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.UI/bin/Debug/net5.0/PetShop.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.UI/bin/Debug/net5.0/PetShop.Core.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.UI/bin/Debug/net5.0/PetShop.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.UI/bin/Debug/net5.0/PetShop.Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.UI/bin/Debug/net5.0/PetShop.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.UI/bin/Debug/net5.0/PetShop.Domain.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.UI/bin/Debug/net5.0/PetShop.SQL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.UI/bin/Debug/net5.0/PetShop.SQL.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.UI/bin/Debug/net5.0/PetShop.SQL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.UI/bin/Debug/net5.0/PetShop.SQL.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.UI/bin/Debug/net5.0/PetShop.UI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.UI/bin/Debug/net5.0/PetShop.UI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.UI/bin/Debug/net5.0/PetShop.UI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.UI/bin/Debug/net5.0/PetShop.UI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.UI/obj/Debug/net5.0/PetShop.UI.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.UI/obj/Debug/net5.0/PetShop.UI.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.UI/obj/Debug/net5.0/PetShop.UI.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.UI/obj/Debug/net5.0/PetShop.UI.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.UI/obj/Debug/net5.0/PetShop.UI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.UI/obj/Debug/net5.0/PetShop.UI.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.UI/obj/Debug/net5.0/PetShop.UI.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.UI/obj/Debug/net5.0/PetShop.UI.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.UI/obj/Debug/net5.0/PetShop.UI.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.UI/obj/Debug/net5.0/PetShop.UI.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.UI/obj/Debug/net5.0/PetShop.UI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.UI/obj/Debug/net5.0/PetShop.UI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.UI/obj/Debug/net5.0/PetShop.UI.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.UI/obj/Debug/net5.0/PetShop.UI.genruntimeconfig.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.UI/obj/Debug/net5.0/PetShop.UI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.UI/obj/Debug/net5.0/PetShop.UI.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.UI/obj/PetShop.UI.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.UI/obj/PetShop.UI.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetShop.UI/obj/PetShop.UI.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.UI/obj/PetShop.UI.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.UI/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.UI/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.UI/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.UI/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.UI/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.UI/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetShop.UI/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.UI/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetShop.sln" beforeDir="false" afterPath="$PROJECT_DIR$/PetShop.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,10 +89,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/PetShop.Core/obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/SourcesCache/29a328843bdc4762af89c8fdc084c4d68f5778/41A/List.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/SourcesCache/12f8289f40244d719022cb6ef860d1db1bbb78/10F/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/SourcesCache/12f8289f40244d719022cb6ef860d1db1bbb78/11A/ControllerActionInvoker.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/SourcesCache/12f8289f40244d719022cb6ef860d1db1bbb78/5/ObjectMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1xCx2kz3iMuWtby0ReMeuPJNybP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -230,6 +191,10 @@
       <workItem from="1630236472141" duration="978000" />
       <workItem from="1630238541501" duration="4761000" />
       <workItem from="1630251936047" duration="4750000" />
+      <workItem from="1630313107425" duration="606000" />
+      <workItem from="1630391903690" duration="1211000" />
+      <workItem from="1630395301577" duration="3132000" />
+      <workItem from="1630399528394" duration="1709000" />
     </task>
     <servers />
   </component>
@@ -255,23 +220,6 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/PetShop.RestAPI/Controllers/PetsController.cs</url>
-          <line>41</line>
-          <properties documentPath="C:\Users\adamo\RiderProjects\PetShopApi\PetShop.RestAPI\Controllers\PetsController.cs" initialLine="31" containingFunctionPresentation="method 'Post'">
-            <startOffsets>
-              <option value="1086" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1118" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <inline-watch fileUrl="file://$PROJECT_DIR$/PetShop.UI/Program.cs" line="23">
         <watch expression="printer" language="C#" />

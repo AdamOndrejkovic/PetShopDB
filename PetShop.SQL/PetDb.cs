@@ -9,36 +9,13 @@ namespace PetShop.SQL
 {
     public class PetDb : IPetRepository, IPetTypeRepository
     {
-        private List<Pet> _petList = new();
-        private List<PetType> _petTypeList = new();
-        private int _petId = 4;
-        private int _petTypeId = 4;
+        private static List<Pet> _petList = new();
+        private static List<PetType> _petTypeList = new();
+        private static int _petId = 4;
+        private static int _petTypeId = 4;
 
         public PetDb()
-        {
-            _petTypeList.Add(new PetType() {Id = 1, Name = "Brown dog"});
-            _petTypeList.Add(new PetType() {Id = 2, Name = "Egyptian Cat"});
-            _petTypeList.Add(new PetType() {Id = 3, Name = "Hungry Goat"});
-            
-            _petList.Add(new Pet()
-            {
-                Id = 1, Name = "Marcus",
-                Type = _petTypeList[0], Birthdate = new DateTime(2008, 5, 1, 8, 30, 52),
-                SoldDate = new DateTime(2008, 7, 8, 8, 30, 52), Color = "Dark Brown", Price = 300
-            });
-            _petList.Add(new Pet()
-            {
-                Id = 2, Name = "Margot",
-                Type = _petTypeList[1], Birthdate = new DateTime(2006, 5, 1, 8, 30, 52),
-                SoldDate = new DateTime(2008, 7, 8, 8, 30, 52), Color = "Blonde", Price = 200
-            });
-            _petList.Add(new Pet()
-            {
-                Id = 3, Name = "Charles",
-                Type = _petTypeList[2], Birthdate = new DateTime(2007, 5, 1, 8, 30, 52),
-                SoldDate = new DateTime(2008, 7, 8, 8, 30, 52), Color = "White", Price = 100
-            });
-        }
+        { }
 
 
         public IEnumerable<Pet> ReadPets()
@@ -123,6 +100,32 @@ namespace PetShop.SQL
         {
             var filteredCheapestPets = from pet in _petList orderby pet.Price ascending select pet;
             return filteredCheapestPets.ToList().Take(5);
+        }
+
+        public void Init()
+        {
+            _petTypeList.Add(new PetType() {Id = 1, Name = "Brown dog"});
+            _petTypeList.Add(new PetType() {Id = 2, Name = "Egyptian Cat"});
+            _petTypeList.Add(new PetType() {Id = 3, Name = "Hungry Goat"});
+            
+            _petList.Add(new Pet()
+            {
+                Id = 1, Name = "Marcus",
+                Type = _petTypeList[0], Birthdate = new DateTime(2008, 5, 1, 8, 30, 52),
+                SoldDate = new DateTime(2008, 7, 8, 8, 30, 52), Color = "Dark Brown", Price = 300
+            });
+            _petList.Add(new Pet()
+            {
+                Id = 2, Name = "Margot",
+                Type = _petTypeList[1], Birthdate = new DateTime(2006, 5, 1, 8, 30, 52),
+                SoldDate = new DateTime(2008, 7, 8, 8, 30, 52), Color = "Blonde", Price = 200
+            });
+            _petList.Add(new Pet()
+            {
+                Id = 3, Name = "Charles",
+                Type = _petTypeList[2], Birthdate = new DateTime(2007, 5, 1, 8, 30, 52),
+                SoldDate = new DateTime(2008, 7, 8, 8, 30, 52), Color = "White", Price = 100
+            });
         }
 
         public List<PetType> GetPetTypes()
