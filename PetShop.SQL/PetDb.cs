@@ -7,12 +7,14 @@ using PetShop.Domain.IRepositories;
 
 namespace PetShop.SQL
 {
-    public class PetDb : IPetRepository, IPetTypeRepository
+    public class PetDb : IPetRepository, IPetTypeRepository, IOwnerRepository
     {
         private static List<Pet> _petList = new();
         private static List<PetType> _petTypeList = new();
         private static int _petId = 4;
         private static int _petTypeId = 4;
+        private static List<Owner> _ownersList = new();
+        private static int _ownerId = 3;
 
         public PetDb()
         { }
@@ -126,6 +128,24 @@ namespace PetShop.SQL
                 Type = _petTypeList[2], Birthdate = new DateTime(2007, 5, 1, 8, 30, 52),
                 SoldDate = new DateTime(2008, 7, 8, 8, 30, 52), Color = "White", Price = 100
             });
+            
+            _ownersList.Add(new Owner()
+            {
+                Id = 1,
+                FirstName = "Bob",
+                LastName = "Marley",
+                Email = "marley@yahoo.fr",
+                PhoneNumber = "35 23 63 34"
+            });
+            
+            _ownersList.Add(new Owner()
+            {
+                Id = 2,
+                FirstName = "Ellen",
+                LastName = "Mackenzie",
+                Email = "ellen@gmail.dk",
+                PhoneNumber = "46 93 12 02"
+            });
         }
 
         public List<PetType> GetPetTypes()
@@ -160,6 +180,59 @@ namespace PetShop.SQL
                     return petType;
                 }
             }
+            return null;
+        }
+
+        public IEnumerable<Owner> GetOwners()
+        {
+            return _ownersList;
+        }
+
+        public Owner GetOwnerById(int id)
+        {
+            foreach (var owner in _ownersList)
+            {
+                if (owner.Id == id)
+                {
+                    return owner;
+                }
+            }
+
+            return null;
+        }
+
+        public Owner CreateOwner(Owner ownerToBeCreated)
+        {
+            ownerToBeCreated.Id = _ownerId++;
+            _ownersList.Add(ownerToBeCreated);
+            return ownerToBeCreated;
+        }
+
+        public Owner UpdateOwner(Owner ownerToUpdate)
+        {
+            Owner findOwner = GetOwnerById(ownerToUpdate.Id);
+            if (findOwner != null)
+            {
+                findOwner.FirstName = ownerToUpdate.FirstName;
+                findOwner.LastName = ownerToUpdate.LastName;
+                findOwner.Email = ownerToUpdate.Email;
+                findOwner.PhoneNumber = ownerToUpdate.PhoneNumber;
+
+                return findOwner;
+            }
+
+            return null;
+        }
+
+        public Owner DeleteOwner(int id)
+        {
+            Owner ownerToDelete = GetOwnerById(id);
+            if (ownerToDelete != null)
+            {
+                _ownersList.Remove(ownerToDelete);
+                return ownerToDelete;
+            }
+
             return null;
         }
     }

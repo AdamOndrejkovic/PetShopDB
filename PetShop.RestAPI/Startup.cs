@@ -34,15 +34,17 @@ namespace PetShop.RestAPI
             services.AddScoped<IPetTypeService, PetTypeService>();
             services.AddScoped<IPetRepository, PetDb>();
             services.AddScoped<IPetTypeRepository, PetDb>();
+            services.AddScoped<IOwnerService, OwnerService>();
+            services.AddScoped<IOwnerRepository, PetDb>();
 
             var serviceProvider = services.BuildServiceProvider();
             var setUp = serviceProvider.GetRequiredService<IPetRepository>();
             setUp.Init();
-            
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "PetShop.RestAPI", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo {Title = "PetShop.RestAPI", Version = "v1"});
             });
         }
 
