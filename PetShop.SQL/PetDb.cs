@@ -110,25 +110,6 @@ namespace PetShop.SQL
             _petTypeList.Add(new PetType() {Id = 2, Name = "Egyptian Cat"});
             _petTypeList.Add(new PetType() {Id = 3, Name = "Hungry Goat"});
             
-            _petList.Add(new Pet()
-            {
-                Id = 1, Name = "Marcus",
-                Type = _petTypeList[0], Birthdate = new DateTime(2008, 5, 1, 8, 30, 52),
-                SoldDate = new DateTime(2008, 7, 8, 8, 30, 52), Color = "Dark Brown", Price = 300
-            });
-            _petList.Add(new Pet()
-            {
-                Id = 2, Name = "Margot",
-                Type = _petTypeList[1], Birthdate = new DateTime(2006, 5, 1, 8, 30, 52),
-                SoldDate = new DateTime(2008, 7, 8, 8, 30, 52), Color = "Blonde", Price = 200
-            });
-            _petList.Add(new Pet()
-            {
-                Id = 3, Name = "Charles",
-                Type = _petTypeList[2], Birthdate = new DateTime(2007, 5, 1, 8, 30, 52),
-                SoldDate = new DateTime(2008, 7, 8, 8, 30, 52), Color = "White", Price = 100
-            });
-            
             _ownersList.Add(new Owner()
             {
                 Id = 1,
@@ -145,6 +126,28 @@ namespace PetShop.SQL
                 LastName = "Mackenzie",
                 Email = "ellen@gmail.dk",
                 PhoneNumber = "46 93 12 02"
+            });
+            
+            _petList.Add(new Pet()
+            {
+                Id = 1, Name = "Marcus",
+                Type = _petTypeList[0], Birthdate = new DateTime(2008, 5, 1, 8, 30, 52),
+                SoldDate = new DateTime(2008, 7, 8, 8, 30, 52), Color = "Dark Brown", Price = 300,
+                Owner = _ownersList[0]
+            });
+            _petList.Add(new Pet()
+            {
+                Id = 2, Name = "Margot",
+                Type = _petTypeList[1], Birthdate = new DateTime(2006, 5, 1, 8, 30, 52),
+                SoldDate = new DateTime(2008, 7, 8, 8, 30, 52), Color = "Blonde", Price = 200,
+                Owner = _ownersList[1]
+            });
+            _petList.Add(new Pet()
+            {
+                Id = 3, Name = "Charles",
+                Type = _petTypeList[2], Birthdate = new DateTime(2007, 5, 1, 8, 30, 52),
+                SoldDate = new DateTime(2008, 7, 8, 8, 30, 52), Color = "White", Price = 100,
+                Owner = _ownersList[0]
             });
         }
 
