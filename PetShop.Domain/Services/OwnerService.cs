@@ -21,7 +21,9 @@ namespace PetShop.Domain.Services
 
         public Owner GetOwnerById(int id)
         {
-            return _ownerRepository.GetOwnerById(id);
+            return _ownerRepository.GetOwnerByIdWithPet(id);
+
+            //return _ownerRepository.GetOwnerById(id);
         }
 
         public Owner CreateOwner(Owner owner)

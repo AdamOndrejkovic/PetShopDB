@@ -238,5 +238,10 @@ namespace PetShop.SQL
 
             return null;
         }
+
+        public Owner GetOwnerByIdWithPet(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -171,17 +171,17 @@
           "bin/placeholder/PetShop.Domain.dll": {}
         }
       },
-      "PetShop.SQL/1.0.0": {
+      "PetShop.FakeDB/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "PetShop.Domain": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/PetShop.SQL.dll": {}
+          "bin/placeholder/PetShop.FakeDB.dll": {}
         },
         "runtime": {
-          "bin/placeholder/PetShop.SQL.dll": {}
+          "bin/placeholder/PetShop.FakeDB.dll": {}
         }
       }
     }
@@ -822,10 +822,10 @@
       "path": "../PetShop.Domain/PetShop.Domain.csproj",
       "msbuildProject": "../PetShop.Domain/PetShop.Domain.csproj"
     },
-    "PetShop.SQL/1.0.0": {
+    "PetShop.FakeDB/1.0.0": {
       "type": "project",
-      "path": "../PetShop.SQL/PetShop.SQL.csproj",
-      "msbuildProject": "../PetShop.SQL/PetShop.SQL.csproj"
+      "path": "../PetShop.FakeDB/PetShop.FakeDB.csproj",
+      "msbuildProject": "../PetShop.FakeDB/PetShop.FakeDB.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -835,49 +835,42 @@
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 6.0.0-preview.7.21377.19",
       "PetShop.Core >= 1.0.0",
       "PetShop.Domain >= 1.0.0",
-      "PetShop.SQL >= 1.0.0"
+      "PetShop.FakeDB >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\adamo\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\adamo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.UI\\PetShop.UI.csproj",
+      "projectUniqueName": "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.UI\\PetShop.UI.csproj",
       "projectName": "PetShop.UI",
-      "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.UI\\PetShop.UI.csproj",
+      "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.UI\\PetShop.UI.csproj",
       "packagesPath": "C:\\Users\\adamo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.UI\\obj\\",
+      "outputPath": "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.UI\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\adamo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\adamo\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.Core\\PetShop.Core.csproj": {
-              "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.Core\\PetShop.Core.csproj"
+            "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Core\\PetShop.Core.csproj": {
+              "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Core\\PetShop.Core.csproj"
             },
-            "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.Domain\\PetShop.Domain.csproj": {
-              "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.Domain\\PetShop.Domain.csproj"
+            "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Domain\\PetShop.Domain.csproj": {
+              "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Domain\\PetShop.Domain.csproj"
             },
-            "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.SQL\\PetShop.SQL.csproj": {
-              "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.SQL\\PetShop.SQL.csproj"
+            "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.FakeDB\\PetShop.FakeDB.csproj": {
+              "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.FakeDB\\PetShop.FakeDB.csproj"
             }
           }
         }

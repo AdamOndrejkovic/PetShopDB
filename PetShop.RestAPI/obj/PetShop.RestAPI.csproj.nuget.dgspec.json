@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.RestAPI\\PetShop.RestAPI.csproj": {}
+    "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.RestAPI\\PetShop.RestAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.Core\\PetShop.Core.csproj": {
+    "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Core\\PetShop.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.Core\\PetShop.Core.csproj",
+        "projectUniqueName": "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Core\\PetShop.Core.csproj",
         "projectName": "PetShop.Core",
-        "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.Core\\PetShop.Core.csproj",
+        "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Core\\PetShop.Core.csproj",
         "packagesPath": "C:\\Users\\adamo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.Core\\obj\\",
+        "outputPath": "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Core\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\adamo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\adamo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -62,36 +56,107 @@
         }
       }
     },
-    "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.Domain\\PetShop.Domain.csproj": {
+    "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Data\\PetShop.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.Domain\\PetShop.Domain.csproj",
-        "projectName": "PetShop.Domain",
-        "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.Domain\\PetShop.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Data\\PetShop.Data.csproj",
+        "projectName": "PetShop.Data",
+        "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Data\\PetShop.Data.csproj",
         "packagesPath": "C:\\Users\\adamo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.Domain\\obj\\",
+        "outputPath": "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Data\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\adamo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\adamo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.Core\\PetShop.Core.csproj": {
-                "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.Core\\PetShop.Core.csproj"
+              "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Core\\PetShop.Core.csproj": {
+                "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Core\\PetShop.Core.csproj"
+              },
+              "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Domain\\PetShop.Domain.csproj": {
+                "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Domain\\PetShop.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite.Core": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite.Design": {
+              "target": "Package",
+              "version": "[2.0.0-preview1-final, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Domain\\PetShop.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Domain\\PetShop.Domain.csproj",
+        "projectName": "PetShop.Domain",
+        "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Domain\\PetShop.Domain.csproj",
+        "packagesPath": "C:\\Users\\adamo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\adamo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Core\\PetShop.Core.csproj": {
+                "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Core\\PetShop.Core.csproj"
               }
             }
           }
@@ -124,42 +189,36 @@
         }
       }
     },
-    "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.RestAPI\\PetShop.RestAPI.csproj": {
+    "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.RestAPI\\PetShop.RestAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.RestAPI\\PetShop.RestAPI.csproj",
+        "projectUniqueName": "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.RestAPI\\PetShop.RestAPI.csproj",
         "projectName": "PetShop.RestAPI",
-        "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.RestAPI\\PetShop.RestAPI.csproj",
+        "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.RestAPI\\PetShop.RestAPI.csproj",
         "packagesPath": "C:\\Users\\adamo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.RestAPI\\obj\\",
+        "outputPath": "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.RestAPI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\adamo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\adamo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.Core\\PetShop.Core.csproj": {
-                "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.Core\\PetShop.Core.csproj"
+              "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Core\\PetShop.Core.csproj": {
+                "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Core\\PetShop.Core.csproj"
               },
-              "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.Domain\\PetShop.Domain.csproj": {
-                "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.Domain\\PetShop.Domain.csproj"
+              "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Data\\PetShop.Data.csproj": {
+                "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Data\\PetShop.Data.csproj"
               },
-              "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.SQL\\PetShop.SQL.csproj": {
-                "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.SQL\\PetShop.SQL.csproj"
+              "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Domain\\PetShop.Domain.csproj": {
+                "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Domain\\PetShop.Domain.csproj"
               }
             }
           }
@@ -174,6 +233,22 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNet.Mvc.Formatters.Json": {
+              "target": "Package",
+              "version": "[6.0.0-rc1-final, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Formatters.Json": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
@@ -193,68 +268,6 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.SQL\\PetShop.SQL.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.SQL\\PetShop.SQL.csproj",
-        "projectName": "PetShop.SQL",
-        "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.SQL\\PetShop.SQL.csproj",
-        "packagesPath": "C:\\Users\\adamo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.SQL\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\adamo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net5.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
-            "projectReferences": {
-              "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.Domain\\PetShop.Domain.csproj": {
-                "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShopApi\\PetShop.Domain\\PetShop.Domain.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

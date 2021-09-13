@@ -10,5 +10,6 @@ namespace PetShop.Domain.IRepositories
         Owner CreateOwner(Owner owner);
         Owner UpdateOwner(Owner ownerToUpdate);
         Owner DeleteOwner(int id);
+        Owner GetOwnerByIdWithPet(int id);
     }
 }
