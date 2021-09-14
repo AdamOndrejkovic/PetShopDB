@@ -1,0 +1,17 @@
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.FakeDB\bin\Debug\net5.0\PetShop.FakeDB.deps.json
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.FakeDB\bin\Debug\net5.0\PetShop.FakeDB.dll
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.FakeDB\bin\Debug\net5.0\ref\PetShop.FakeDB.dll
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.FakeDB\bin\Debug\net5.0\PetShop.FakeDB.pdb
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.FakeDB\bin\Debug\net5.0\PetShop.Core.dll
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.FakeDB\bin\Debug\net5.0\PetShop.Domain.dll
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.FakeDB\bin\Debug\net5.0\PetShop.Domain.pdb
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.FakeDB\bin\Debug\net5.0\PetShop.Core.pdb
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.FakeDB\obj\Debug\net5.0\PetShop.FakeDB.csproj.AssemblyReference.cache
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.FakeDB\obj\Debug\net5.0\PetShop.FakeDB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.FakeDB\obj\Debug\net5.0\PetShop.FakeDB.AssemblyInfoInputs.cache
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.FakeDB\obj\Debug\net5.0\PetShop.FakeDB.AssemblyInfo.cs
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.FakeDB\obj\Debug\net5.0\PetShop.FakeDB.csproj.CoreCompileInputs.cache
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.FakeDB\obj\Debug\net5.0\PetShop.FakeDB.csproj.CopyComplete
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.FakeDB\obj\Debug\net5.0\PetShop.FakeDB.dll
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.FakeDB\obj\Debug\net5.0\ref\PetShop.FakeDB.dll
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.FakeDB\obj\Debug\net5.0\PetShop.FakeDB.pdb

@@ -1,0 +1,17 @@
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.Data\bin\Debug\net5.0\PetShop.Data.deps.json
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.Data\bin\Debug\net5.0\PetShop.Data.dll
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.Data\bin\Debug\net5.0\ref\PetShop.Data.dll
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.Data\bin\Debug\net5.0\PetShop.Data.pdb
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.Data\bin\Debug\net5.0\PetShop.Core.dll
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.Data\bin\Debug\net5.0\PetShop.Domain.dll
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.Data\bin\Debug\net5.0\PetShop.Domain.pdb
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.Data\bin\Debug\net5.0\PetShop.Core.pdb
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.Data\obj\Debug\net5.0\PetShop.Data.csproj.AssemblyReference.cache
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.Data\obj\Debug\net5.0\PetShop.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.Data\obj\Debug\net5.0\PetShop.Data.AssemblyInfoInputs.cache
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.Data\obj\Debug\net5.0\PetShop.Data.AssemblyInfo.cs
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.Data\obj\Debug\net5.0\PetShop.Data.csproj.CoreCompileInputs.cache
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.Data\obj\Debug\net5.0\PetShop.Data.csproj.CopyComplete
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.Data\obj\Debug\net5.0\PetShop.Data.dll
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.Data\obj\Debug\net5.0\ref\PetShop.Data.dll
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.Data\obj\Debug\net5.0\PetShop.Data.pdb
