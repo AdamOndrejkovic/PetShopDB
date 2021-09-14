@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using PetShop.Core.Models;
 using PetShop.Domain.IRepositories;
 
-namespace PetShop.Data.Repositories
+namespace PetShop.Datas.Repositories
 {
     public class OwnerRepository: IOwnerRepository
     {
@@ -18,12 +18,17 @@ namespace PetShop.Data.Repositories
         
         public IEnumerable<Owner> GetOwners()
         {
-            return _context.Owners;
+            return _context.Owners
+                .Include(o => o.Pets)
+                .ThenInclude(p => p.Type);
         }
 
         public Owner GetOwnerById(int id)
         {
-            return _context.Owners.FirstOrDefault(owner => owner.Id == id);
+            return _context.Owners
+                    .Include(o => o.Pets)
+                    .ThenInclude(p => p.Type)
+                    .FirstOrDefault(owner => owner.Id == id);
         }
         
         public Owner GetOwnerByIdWithPet(int id)

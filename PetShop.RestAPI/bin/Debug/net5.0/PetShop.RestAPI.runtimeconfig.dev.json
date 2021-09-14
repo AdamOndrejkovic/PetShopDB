@@ -2,7 +2,8 @@
   "runtimeOptions": {
     "additionalProbingPaths": [
       "C:\\Users\\adamo\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\adamo\\.nuget\\packages"
+      "C:\\Users\\adamo\\.nuget\\packages",
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ]
   }
 }

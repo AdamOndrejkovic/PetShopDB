@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PetShop.Core.Models;
 
-namespace PetShop.Data
+namespace PetShop.Datas
 {
     public class PetShopContext : DbContext
     {

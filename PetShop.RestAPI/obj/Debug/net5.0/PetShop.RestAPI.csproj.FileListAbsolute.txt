@@ -104,9 +104,7 @@ C:\Users\adamo\RiderProjects\PetShopDB\PetShop.RestAPI\bin\Debug\net5.0\Microsof
 C:\Users\adamo\RiderProjects\PetShopDB\PetShop.RestAPI\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\adamo\RiderProjects\PetShopDB\PetShop.RestAPI\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\adamo\RiderProjects\PetShopDB\PetShop.RestAPI\bin\Debug\net5.0\Microsoft.Data.Sqlite.dll
-C:\Users\adamo\RiderProjects\PetShopDB\PetShop.RestAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
 C:\Users\adamo\RiderProjects\PetShopDB\PetShop.RestAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Sqlite.dll
-C:\Users\adamo\RiderProjects\PetShopDB\PetShop.RestAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Sqlite.Design.dll
 C:\Users\adamo\RiderProjects\PetShopDB\PetShop.RestAPI\bin\Debug\net5.0\SQLitePCLRaw.batteries_v2.dll
 C:\Users\adamo\RiderProjects\PetShopDB\PetShop.RestAPI\bin\Debug\net5.0\SQLitePCLRaw.nativelibrary.dll
 C:\Users\adamo\RiderProjects\PetShopDB\PetShop.RestAPI\bin\Debug\net5.0\SQLitePCLRaw.core.dll
@@ -124,3 +122,7 @@ C:\Users\adamo\RiderProjects\PetShopDB\PetShop.RestAPI\bin\Debug\net5.0\runtimes
 C:\Users\adamo\RiderProjects\PetShopDB\PetShop.RestAPI\bin\Debug\net5.0\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\adamo\RiderProjects\PetShopDB\PetShop.RestAPI\bin\Debug\net5.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\adamo\RiderProjects\PetShopDB\PetShop.RestAPI\bin\Debug\net5.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.RestAPI\bin\Debug\net5.0\Microsoft.AspNet.Mvc.Core.dll
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.RestAPI\bin\Debug\net5.0\Json.Net.dll
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.RestAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.RestAPI\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll

@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using PetShop.Core.Models;
 using PetShop.Domain.IRepositories;
 
-namespace PetShop.Data.Repositories
+namespace PetShop.Datas.Repositories
 {
     public class PetRepository : IPetRepository
     {
@@ -16,7 +17,7 @@ namespace PetShop.Data.Repositories
         
         public IEnumerable<Pet> ReadPets()
         {
-            return _context.Pets;
+            return _context.Pets.Include(p => p.Owner).Include(p => p.Type);
         }
 
         public IEnumerable<Pet> FilterPetsByType(string idPetType)
@@ -27,6 +28,8 @@ namespace PetShop.Data.Repositories
         public Pet CreatePet(Pet petToBeCreated)
         {
             var pet = _context.Pets.Add(petToBeCreated).Entity;
+            var ownerOfPet = _context.Owners.Where(owner => owner.Id == pet.Id);
+            _context.Owners.Find(ownerOfPet).Pets.Add(pet);
             _context.SaveChanges();
             return pet;
         }
@@ -57,11 +60,6 @@ namespace PetShop.Data.Repositories
         }
 
         public IEnumerable<Pet> GetCheapestPets()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void Init()
         {
             throw new System.NotImplementedException();
         }

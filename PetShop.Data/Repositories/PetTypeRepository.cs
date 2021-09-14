@@ -3,7 +3,7 @@ using System.Linq;
 using PetShop.Core.Models;
 using PetShop.Domain.IRepositories;
 
-namespace PetShop.Data.Repositories
+namespace PetShop.Datas.Repositories
 {
     public class PetTypeRepository: IPetTypeRepository
     {

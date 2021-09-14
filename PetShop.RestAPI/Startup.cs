@@ -18,8 +18,8 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using PetShop.Core.IServices;
 using PetShop.Core.Models;
-using PetShop.Data;
-using PetShop.Data.Repositories;
+using PetShop.Datas;
+using PetShop.Datas.Repositories;
 using PetShop.Domain.IRepositories;
 using PetShop.Domain.Services;
 
@@ -41,10 +41,19 @@ namespace PetShop.RestAPI
                 opt => opt.UseInMemoryDatabase("PetDB")
             );*/
 
-            services.AddDbContext<PetShopContext>(
-                opt => opt.UseSqlite("Data Source=petShop.db")
-                );
+            var loggerFactory = LoggerFactory.Create(builder =>
+            {
+                builder.AddConsole();
+            });
 
+            services.AddDbContext<PetShopContext>(
+                opt =>
+                {
+                    opt.UseLoggerFactory(loggerFactory)
+                        .UseSqlite("Data Source=petShop.db");
+                }, ServiceLifetime.Transient
+            );
+            
             services.AddScoped<IPetService, PetService>();
             services.AddScoped<IPetTypeService, PetTypeService>();
             services.AddScoped<IPetRepository, PetRepository>();
@@ -52,13 +61,10 @@ namespace PetShop.RestAPI
             services.AddScoped<IOwnerService, OwnerService>();
             services.AddScoped<IOwnerRepository, OwnerRepository>();
 
-            /*services.AddMvc().AddJsonOptions(options =>
-            {
-                /*options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();#1#
-                options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
-            });
+            services.AddControllers().AddNewtonsoftJson(options=>
+                options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);*/
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             
             var serviceProvider = services.BuildServiceProvider();
             var setUp = serviceProvider.GetRequiredService<IPetRepository>();

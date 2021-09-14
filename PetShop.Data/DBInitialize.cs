@@ -1,7 +1,7 @@
 ﻿using System;
 using PetShop.Core.Models;
 
-namespace PetShop.Data
+namespace PetShop.Datas
 {
     public class DbInitialize
     {
@@ -36,7 +36,7 @@ namespace PetShop.Data
                         PhoneNumber = "35 23 63 34"
                     }).Entity;
 
-                    context.Pets.Add(new Pet()
+                    var pet= context.Pets.Add(new Pet()
                     {
                         Name = "Scrappy-Doo",
                         Type = petType,
@@ -45,9 +45,9 @@ namespace PetShop.Data
                         Color = "Blonde",
                         Price = 200,
                         Owner = owner
-                    });
+                    }).Entity;
 
-                    context.Pets.Add(new Pet()
+                    var petTwo = context.Pets.Add(new Pet()
                     {
                         Name = "Scooby-Doo",
                         Type = petTypeTwo,
@@ -56,8 +56,11 @@ namespace PetShop.Data
                         Color = "Blonde",
                         Price = 250,
                         Owner = ownerTwo
-                    });
+                    }).Entity;
 
+                    owner.Pets.Add(pet);
+                    ownerTwo.Pets.Add(petTwo);
+                    
                     context.SaveChanges();
         }
     }

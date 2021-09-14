@@ -13,7 +13,7 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0-preview.7.21377.19",
           "PetShop.Core": "1.0.0",
           "PetShop.Domain": "1.0.0",
-          "PetShop.SQL": "1.0.0"
+          "PetShop.FakeDB": "1.0.0"
         },
         "runtime": {
           "PetShop.UI.dll": {}
@@ -124,12 +124,12 @@
           "PetShop.Domain.dll": {}
         }
       },
-      "PetShop.SQL/1.0.0": {
+      "PetShop.FakeDB/1.0.0": {
         "dependencies": {
           "PetShop.Domain": "1.0.0"
         },
         "runtime": {
-          "PetShop.SQL.dll": {}
+          "PetShop.FakeDB.dll": {}
         }
       }
     }
@@ -241,7 +241,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "PetShop.SQL/1.0.0": {
+    "PetShop.FakeDB/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

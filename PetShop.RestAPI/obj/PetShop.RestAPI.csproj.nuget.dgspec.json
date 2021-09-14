@@ -13,13 +13,19 @@
         "packagesPath": "C:\\Users\\adamo\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Core\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\adamo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\adamo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -65,22 +71,25 @@
         "packagesPath": "C:\\Users\\adamo\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Data\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\adamo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\adamo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Core\\PetShop.Core.csproj": {
-                "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Core\\PetShop.Core.csproj"
-              },
               "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Domain\\PetShop.Domain.csproj": {
                 "projectPath": "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Domain\\PetShop.Domain.csproj"
               }
@@ -97,21 +106,13 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore.SqlServer": {
+            "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.9, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[5.0.9, )"
-            },
-            "Microsoft.EntityFrameworkCore.Sqlite.Core": {
-              "target": "Package",
-              "version": "[5.0.9, )"
-            },
-            "Microsoft.EntityFrameworkCore.Sqlite.Design": {
-              "target": "Package",
-              "version": "[2.0.0-preview1-final, )"
             }
           },
           "imports": [
@@ -142,13 +143,19 @@
         "packagesPath": "C:\\Users\\adamo\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\adamo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\adamo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -198,13 +205,19 @@
         "packagesPath": "C:\\Users\\adamo\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\adamo\\RiderProjects\\PetShopDB\\PetShop.RestAPI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\adamo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\adamo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -233,13 +246,29 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Json.Net": {
+              "target": "Package",
+              "version": "[1.0.33, )"
+            },
+            "Microsoft.AspNet.Mvc.Core": {
+              "target": "Package",
+              "version": "[6.0.0-rc1-final, )"
+            },
             "Microsoft.AspNet.Mvc.Formatters.Json": {
               "target": "Package",
               "version": "[6.0.0-rc1-final, )"
             },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
             "Microsoft.AspNetCore.Mvc.Formatters.Json": {
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[5.0.9, )"
             },
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
@@ -251,7 +280,7 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[5.6.3, )"
+              "version": "[6.2.1, )"
             }
           },
           "imports": [
