@@ -9,7 +9,7 @@ namespace PetShop.Core.Models
         public PetType Type {get; set;}
         public DateTime Birthdate {get; set;}
         public DateTime SoldDate {get; set;}
-        public string Color {get; set;}
+        public PetColor Color {get; set;}
         public double Price {get; set;}
         
         public Owner Owner { get; set; }

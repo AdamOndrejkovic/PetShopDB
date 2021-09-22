@@ -29,5 +29,19 @@ namespace PetShop.Datas.Repositories
         {
             throw new System.NotImplementedException();
         }
+
+        public PetType GetPetTypeById(int id)
+        {
+            return _context.PetTypes.FirstOrDefault(pet => pet.Id == id);
+        }
+
+        public PetType DeletePetType(int id)
+        {
+            var petTypeRemove = _context.Remove<PetType>(new PetType() { Id = id }).Entity;
+            var petToRemove = _context.Pets.Where(pet => pet.Type.Id == petTypeRemove.Id);
+            _context.RemoveRange(petTypeRemove);
+            _context.SaveChanges();
+            return petTypeRemove; 
+        }
     }
 }

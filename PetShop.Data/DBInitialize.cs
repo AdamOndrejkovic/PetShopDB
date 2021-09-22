@@ -1,5 +1,6 @@
 ﻿using System;
 using PetShop.Core.Models;
+using PetShop.Datas.Entities;
 
 namespace PetShop.Datas
 {
@@ -10,17 +11,19 @@ namespace PetShop.Datas
             context.Database.EnsureDeleted();
                     context.Database.EnsureCreated();
                     
-                    var petType = context.PetTypes.Add(new PetType()
+                    var petType = context.PetTypes.Add(new PetTypeEntity()
                     {
-                        Name = "Some weird animal"
+                        Id = 1,
+                        Type = "Some weird animal"
                     }).Entity;
 
-                    var petTypeTwo = context.PetTypes.Add(new PetType()
+                    var petTypeTwo = context.PetTypes.Add(new PetTypeEntity()
                     {
-                        Name = "Scooby-Doo"
+                        Id = 2,
+                        Type = "Scooby-Doo"
                     }).Entity;
 
-                    var owner = context.Owners.Add(new Owner()
+                    var owner = context.Owners.Add(new OwnerEntity()
                     {
                         FirstName = "Velma",
                         LastName = "Dinkley",
@@ -28,7 +31,7 @@ namespace PetShop.Datas
                         PhoneNumber = "35 23 63 34"
                     }).Entity;
 
-                    var ownerTwo = context.Owners.Add(new Owner()
+                    var ownerTwo = context.Owners.Add(new OwnerEntity()
                     {
                         FirstName = "Fred",
                         LastName = "Jones",
@@ -36,24 +39,24 @@ namespace PetShop.Datas
                         PhoneNumber = "35 23 63 34"
                     }).Entity;
 
-                    var pet= context.Pets.Add(new Pet()
+                    var pet= context.Pets.Add(new PetEntity()
                     {
                         Name = "Scrappy-Doo",
                         Type = petType,
                         Birthdate = new DateTime(2006, 5, 1, 8, 30, 52),
                         SoldDate = new DateTime(2008, 7, 8, 8, 30, 52),
-                        Color = "Blonde",
+                        Color = new PetColorEntity(){Id = 1, Color = "Blonde"},
                         Price = 200,
                         Owner = owner
                     }).Entity;
 
-                    var petTwo = context.Pets.Add(new Pet()
+                    var petTwo = context.Pets.Add(new PetEntity()
                     {
                         Name = "Scooby-Doo",
                         Type = petTypeTwo,
                         Birthdate = new DateTime(2007, 5, 1, 8, 30, 52),
                         SoldDate = new DateTime(2008, 7, 8, 8, 30, 52),
-                        Color = "Blonde",
+                        Color = new PetColorEntity(){Id = 2, Color = "Brown"},
                         Price = 250,
                         Owner = ownerTwo
                     }).Entity;

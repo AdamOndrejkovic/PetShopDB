@@ -28,5 +28,15 @@ namespace PetShop.Domain.Services
         {
             return _petTypeRepository.UpdatePetType(typeId, newPetType);
         }
+
+        public PetType GetPetTypeById(int id)
+        {
+            return _petTypeRepository.GetPetTypeById(id);
+        }
+
+        public PetType DeletePetType(int id)
+        {
+            return _petTypeRepository.DeletePetType(id);
+        }
     }
 }

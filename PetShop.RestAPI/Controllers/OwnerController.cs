@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using PetShop.Core.IServices;
 using PetShop.Core.Models;
+using PetShop.RestAPI.Dto.Owner;
 
 namespace PetShop.RestAPI.Controllers
 {
@@ -20,12 +21,12 @@ namespace PetShop.RestAPI.Controllers
         
         //Create Owner
         [HttpPost]
-        public ActionResult<Owner> CreateOwner([FromBody] Owner owner)
+        public ActionResult<CreateOwnerDto> CreateOwner([FromBody] Owner owner)
         {
             var createOwner = _ownerService.CreateOwner(owner);
             if (createOwner != null)
             {
-                return createOwner;
+                return new CreateOwnerDto(){Id = createOwner.Id , Name = createOwner.FirstName + " " + createOwner.LastName};
             }
 
             return BadRequest("Owner Could not be created. Please Try again");

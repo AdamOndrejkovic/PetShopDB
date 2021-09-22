@@ -5,7 +5,7 @@ namespace PetShop.Domain.IRepositories
 {
     public interface IPetRepository
     {
-        IEnumerable<Pet> ReadPets();
+        IEnumerable<Pet> ReadPets(Filter filter);
         IEnumerable<Pet> FilterPetsByType(string idPetType);
         Pet CreatePet(Pet petToBeCreated);
         Pet DeletePet(int idPet);

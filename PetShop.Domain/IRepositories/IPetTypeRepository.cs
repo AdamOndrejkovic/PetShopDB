@@ -8,5 +8,7 @@ namespace PetShop.Domain.IRepositories
         List<PetType> GetPetTypes();
         PetType NewPetType(string type);
         PetType UpdatePetType(int typeId, string newPetType);
+        PetType GetPetTypeById(int id);
+        PetType DeletePetType(int id);
     }
 }

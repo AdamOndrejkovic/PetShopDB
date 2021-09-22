@@ -178,7 +178,7 @@ namespace PetShop.UI
                             Convert.ToInt32(formatedBrithdate[1]), Convert.ToInt32(formatedBrithdate[0])),
                         SoldDate = new DateTime(Convert.ToInt32(formatedSolddate[2]), Convert.ToInt32(formatedSolddate[1]),
                             Convert.ToInt32(formatedSolddate[0])),
-                        Color = newColor,
+                        //Color = newColor,
                         Price = double.Parse(newPrice)
                     });
                 CheckUpdated(updatedPet);

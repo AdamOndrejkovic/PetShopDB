@@ -2,6 +2,7 @@
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using PetShop.Core.Models;
+using PetShop.Datas.Convertor;
 using PetShop.Domain.IRepositories;
 
 namespace PetShop.Datas.Repositories
@@ -9,15 +10,33 @@ namespace PetShop.Datas.Repositories
     public class PetRepository : IPetRepository
     {
         private readonly PetShopContext _context;
+        private readonly PetConvertor _convertorPet;
 
-        public PetRepository(PetShopContext context)
+        public PetRepository(PetShopContext context, PetConvertor petConvertor)
         {
             _context = context;
+            _convertorPet = petConvertor;
         }
         
-        public IEnumerable<Pet> ReadPets()
+        public IEnumerable<Pet> ReadPets(Filter filter)
         {
-            return _context.Pets.Include(p => p.Owner).Include(p => p.Type);
+            if (filter == null)
+            {
+                return _context.Pets.Include(p => p.Owner).Include(p => p.Type)
+                    .Select(pe => new Pet()
+                    {
+                        
+                    });
+            }
+
+            return _context.Pets
+                .Skip((filter.CurrentPage - 1) * filter.ItemsPerPage)
+                .Take(filter.ItemsPerPage)
+                .Select(pe => new Pet()
+                {
+                    
+                });
+
         }
 
         public IEnumerable<Pet> FilterPetsByType(string idPetType)
@@ -27,11 +46,15 @@ namespace PetShop.Datas.Repositories
 
         public Pet CreatePet(Pet petToBeCreated)
         {
-            var pet = _context.Pets.Add(petToBeCreated).Entity;
+            /*var pet = _context.Pets.Add(petToBeCreated).Entity;
             var ownerOfPet = _context.Owners.Where(owner => owner.Id == pet.Id);
             _context.Owners.Find(ownerOfPet).Pets.Add(pet);
             _context.SaveChanges();
-            return pet;
+            return pet;*/
+            var petEntity = _convertorPet.PetConvert(petToBeCreated);
+            _context.Pets.Attach(petEntity).State = EntityState.Added;
+            _context.SaveChanges();
+            return petToBeCreated;
         }
 
         public Pet DeletePet(int idPet)
@@ -46,12 +69,15 @@ namespace PetShop.Datas.Repositories
 
         public Pet FindPetById(int idForEdit)
         {
-            return _context.Pets.FirstOrDefault(pet => pet.Id == idForEdit);
+            return _context.Pets.Select(p => new Pet(){}).FirstOrDefault(pet => pet.Id == idForEdit);
         }
 
         public Pet UpdatePet(Pet pet)
         {
-            throw new System.NotImplementedException();
+            _context.Attach(pet).State = EntityState.Modified;
+            _context.Entry(pet).Reference(p => p.Owner).IsModified = true;
+            _context.SaveChanges();
+            return pet;
         }
 
         public List<Pet> SortByPrice(string sortOrder)

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using PetShop.Core.IServices;
 using PetShop.Core.Models;
@@ -19,7 +20,7 @@ namespace PetShop.Domain.Services
         
         public List<Pet> GetPets()
         {
-            return _petRepository.ReadPets().ToList();
+            return _petRepository.ReadPets(null).ToList();
         }
 
         public List<Pet> GetFilteredPetsByType(string idPetType)
@@ -32,7 +33,22 @@ namespace PetShop.Domain.Services
             return null;
         }
 
-        public Pet NewPet(string name, PetType type, string birthdate, string solddate, string color, string price)
+        public List<Pet> GetFilteredPets(Filter filter)
+        {
+            if (filter.CurrentPage < 0 || filter.ItemsPerPage < 0)
+            {
+                throw new InvalidDataException("CurrentPage and ItemsPerPage must be zero or more");
+            }
+
+            if ((filter.CurrentPage - 1 * filter.ItemsPerPage) >= _petRepository.ReadPets(null).Count())
+            {
+                throw new InvalidDataException("Index out of bounds. Current page is to high");
+            }
+
+            return _petRepository.ReadPets(filter.CurrentPage == 0 && filter.ItemsPerPage == 0 ? null : filter).ToList();
+        }
+
+        public Pet NewPet(string name, PetType type, string birthdate, string solddate, PetColor color, string price)
         {
             string[] formatedBrithdate = birthdate.Split("/");
             string[] formatedSolddate = solddate.Split("/");

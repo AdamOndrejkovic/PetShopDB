@@ -7,7 +7,8 @@ using PetShop.Domain.IRepositories;
 
 namespace PetShop.SQL
 {
-    public class PetDb : IPetRepository, IPetTypeRepository, IOwnerRepository
+    public class PetDb 
+    //: IPetRepository, IPetTypeRepository, IOwnerRepository
     {
         private static List<Pet> _petList = new();
         private static List<PetType> _petTypeList = new();
@@ -23,6 +24,11 @@ namespace PetShop.SQL
         public IEnumerable<Pet> ReadPets()
         {
             return _petList;
+        }
+
+        public IEnumerable<Pet> ReadPets(Filter filter)
+        {
+            throw new NotImplementedException();
         }
 
         public IEnumerable<Pet> FilterPetsByType(string idPetType)
@@ -172,6 +178,11 @@ namespace PetShop.SQL
             }
 
             return null;
+        }
+
+        public PetType GetPetTypeById(int id)
+        {
+            throw new NotImplementedException();
         }
 
         private PetType FindPetTypeById(int typeId)

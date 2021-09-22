@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using PetShop.Core.IServices;
 using PetShop.Core.Models;
+using PetShop.RestAPI.Dto;
 
 namespace PetShop.RestAPI.Controllers
 {
@@ -23,47 +20,55 @@ namespace PetShop.RestAPI.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Pet> Get()
+        public ActionResult<IEnumerable<PetReadAllDto>> Get([FromQuery] Filter filter)
         {
-            return _petService.GetPets();
+            try
+            {
+                return Ok(_petService.GetFilteredPets(filter).Select(p => new PetReadAllDto{ Id = p.Id, Name = p.Name , Price = p.Price}));
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
 
         [HttpGet("{id}")]
-        public ActionResult<Pet> Get(int id)
+        public ActionResult<FilteredPetDto> Get(int id)
         {
             var filteredPet = _petService.FindPetById(id);
             if (filteredPet != null)
             {
-                return filteredPet;
+                return new FilteredPetDto() {PetName = filteredPet.Name, OwnerName = filteredPet.Owner.FirstName};
             }
 
             return BadRequest($"No pet was found with id: {id}. Try to use other id.");
         }
 
         [HttpPost]
-        public ActionResult<Pet> Post([FromBody] Pet petValue)
+        public ActionResult<PetCreatedDto> Post([FromBody] PetCreateDto petValue)
         {
             if (string.IsNullOrEmpty(petValue.Name))
             {
                 return BadRequest("First name required");
             }
 
-            return _petService.CreatePet(petValue);
+            var createdPet =_petService.CreatePet(new Pet(){Name = petValue.Name, Owner = new Owner(){Id = petValue.OwnerId}, Type = new PetType(){Id = petValue.PetTypeId}});
+            return new PetCreatedDto() {Name = createdPet.Name};
         }
 
         [HttpPut("{id}")]
-        public ActionResult<Pet> Put(int id, [FromBody] Pet pet)
+        public ActionResult<UpdatePetDto> Put(int id, [FromBody] Pet pet)
         {
             if (id < 1 || id != pet.Id)
             {
                 return BadRequest("Parameter Id and customer Id must be the same");
             }
 
-            return _petService.UpdatePet(pet);
+            return new UpdatePetDto() {Name = _petService.UpdatePet(pet).Name};
         }
 
         [HttpDelete("{id}")]
-        public ActionResult<Pet> DeletePet(int id)
+        public ActionResult<DeletePetDto> DeletePet(int id)
         {
             var deletedPet = _petService.DeletePet(id);
 
@@ -72,7 +77,7 @@ namespace PetShop.RestAPI.Controllers
                 return BadRequest("An error occurred. Your pet couldn't be deleted");
             }
 
-            return deletedPet;
+            return new DeletePetDto(){Name = deletedPet.Name};
         }
     }
 }

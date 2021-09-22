@@ -2,6 +2,8 @@
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using PetShop.Core.Models;
+using PetShop.Datas.Convertor;
+using PetShop.Datas.Entities;
 using PetShop.Domain.IRepositories;
 
 namespace PetShop.Datas.Repositories
@@ -10,25 +12,29 @@ namespace PetShop.Datas.Repositories
     {
         
         private readonly PetShopContext _context;
+        private readonly OwnerConvertor _ownerConvertor;
 
-        public OwnerRepository(PetShopContext context)
+        public OwnerRepository(PetShopContext context, OwnerConvertor ownerConvertor)
         {
             _context = context;
+            _ownerConvertor = ownerConvertor;
         }
         
         public IEnumerable<Owner> GetOwners()
         {
-            return _context.Owners
+            var owner = _context.Owners
                 .Include(o => o.Pets)
                 .ThenInclude(p => p.Type);
+            return _ownerConvertor.OwnerEntityConvertor(owner);
         }
 
         public Owner GetOwnerById(int id)
         {
-            return _context.Owners
+            var owner = _context.Owners
                     .Include(o => o.Pets)
                     .ThenInclude(p => p.Type)
                     .FirstOrDefault(owner => owner.Id == id);
+            return _ownerConvertor.OwnerEntityConvertor(owner);
         }
         
         public Owner GetOwnerByIdWithPet(int id)
@@ -37,24 +43,30 @@ namespace PetShop.Datas.Repositories
                 join pet in _context.Pets on owner.Id equals pet.Owner.Id
                 select owner;*/
 
-            return _context.Owners.FirstOrDefault(owner => owner.Id == id);
+            var owner = _context.Owners.FirstOrDefault(owner => owner.Id == id);
+            return _ownerConvertor.OwnerEntityConvertor(owner);
         }
 
         public Owner CreateOwner(Owner owner)
         {
-            return _context.Owners.Add(owner).Entity;
+            _context.Attach(owner).State = EntityState.Added;
+            _context.SaveChanges();
+            return owner;
         }
 
         public Owner UpdateOwner(Owner ownerToUpdate)
         {
-            throw new System.NotImplementedException();
+            _context.Attach(ownerToUpdate).State = EntityState.Modified;
+            _context.Entry(ownerToUpdate).Reference(o => o.Pets).IsModified = true;
+            _context.SaveChanges();
+            return ownerToUpdate;
         }
 
         public Owner DeleteOwner(int id)
         {
-            var ownerRemove = _context.Owners.Remove(new Owner() { Id = id }).Entity;
+            var ownerToRemove = _context.Owners.Remove(new OwnerEntity() { Id = id }).Entity;
             _context.SaveChanges();
-            return ownerRemove;
+            return _ownerConvertor.OwnerEntityConvertor(ownerToRemove);
         }
     }
 }
