@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using PetShop.Core.Models;
+using PetShop.Datas.Convertor;
 using PetShop.Domain.IRepositories;
 
 namespace PetShop.Datas.Repositories
@@ -9,15 +10,17 @@ namespace PetShop.Datas.Repositories
     {
         
         private readonly PetShopContext _context;
+        private readonly PetTypeConvertor _petTypeConvertor;
 
-        public PetTypeRepository(PetShopContext context)
+        public PetTypeRepository(PetShopContext context, PetTypeConvertor petTypeConvertor)
         {
             _context = context;
+            _petTypeConvertor = petTypeConvertor;
         }
         
         public List<PetType> GetPetTypes()
         {
-            return _context.PetTypes.ToList();
+            return _context.;
         }
 
         public PetType NewPetType(string type)

@@ -26,12 +26,11 @@ namespace PetShop.Datas.Convertor
                 Price = petEntity.Price,
                 Owner = new Owner()
                 {
-                    Id = petEntity.Owner.Id
-                    Id = petEntity.Owner.Id
-                    Id = petEntity.Owner.Id
-                    Id = petEntity.Owner.Id
-                    Id = petEntity.Owner.Id
-                    Id = petEntity.Owner.Id
+                    Id = petEntity.Owner.Id,
+                    FirstName = petEntity.Owner.FirstName,
+                    LastName = petEntity.Owner.LastName,
+                    PhoneNumber = petEntity.Owner.PhoneNumber,
+                    Email = petEntity.Owner.Email,
                 }
                 
             };
