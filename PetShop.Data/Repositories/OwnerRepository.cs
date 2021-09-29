@@ -8,33 +8,31 @@ using PetShop.Domain.IRepositories;
 
 namespace PetShop.Datas.Repositories
 {
-    public class OwnerRepository: IOwnerRepository
+    public class OwnerRepository: IOwnerRepository, IOwnerConvertor
     {
         
         private readonly PetShopContext _context;
-        private readonly OwnerConvertor _ownerConvertor;
 
-        public OwnerRepository(PetShopContext context, OwnerConvertor ownerConvertor)
+        public OwnerRepository(PetShopContext context)
         {
             _context = context;
-            _ownerConvertor = ownerConvertor;
         }
         
         public IEnumerable<Owner> GetOwners()
         {
-            var owner = _context.Owners
+            return _context.Owners
                 .Include(o => o.Pets)
-                .ThenInclude(p => p.Type);
-            return _ownerConvertor.OwnerEntityConvertor(owner);
+                .ThenInclude(p => p.PetType)
+                .Select(OwnerEntityConvertor).ToList();
         }
 
         public Owner GetOwnerById(int id)
         {
             var owner = _context.Owners
                     .Include(o => o.Pets)
-                    .ThenInclude(p => p.Type)
+                    .ThenInclude(p => p.PetType)
                     .FirstOrDefault(owner => owner.Id == id);
-            return _ownerConvertor.OwnerEntityConvertor(owner);
+            return OwnerEntityConvertor(owner);
         }
         
         public Owner GetOwnerByIdWithPet(int id)
@@ -44,7 +42,7 @@ namespace PetShop.Datas.Repositories
                 select owner;*/
 
             var owner = _context.Owners.FirstOrDefault(owner => owner.Id == id);
-            return _ownerConvertor.OwnerEntityConvertor(owner);
+            return OwnerEntityConvertor(owner);
         }
 
         public Owner CreateOwner(Owner owner)
@@ -66,7 +64,33 @@ namespace PetShop.Datas.Repositories
         {
             var ownerToRemove = _context.Owners.Remove(new OwnerEntity() { Id = id }).Entity;
             _context.SaveChanges();
-            return _ownerConvertor.OwnerEntityConvertor(ownerToRemove);
+            return OwnerEntityConvertor(ownerToRemove);
+        }
+
+        public Owner OwnerEntityConvertor(OwnerEntity ownerEntity)
+        {
+            return new Owner()
+            {
+                Id = ownerEntity.Id,
+                FirstName = ownerEntity.FirstName,
+                LastName = ownerEntity.LastName,
+                Email = ownerEntity.Email,
+                PhoneNumber = ownerEntity.PhoneNumber,
+                //Pets = ownerEntity.Pets
+            };
+        }
+
+        public OwnerEntity OwnerConvert(Owner owner)
+        {
+            return new OwnerEntity()
+            {
+                Id = owner.Id,
+                FirstName = owner.FirstName,
+                LastName = owner.LastName,
+                Email = owner.Email,
+                PhoneNumber = owner.PhoneNumber,
+                //Pets = owner.Pets
+            };
         }
     }
 }

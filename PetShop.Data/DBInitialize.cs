@@ -11,7 +11,7 @@ namespace PetShop.Datas
             context.Database.EnsureDeleted();
                     context.Database.EnsureCreated();
                     
-                    var petType = context.PetTypes.Add(new PetTypeEntity()
+                    /*var petType = context.PetTypes.Add(new PetTypeEntity()
                     {
                         Id = 1,
                         Type = "Some weird animal"
@@ -64,7 +64,7 @@ namespace PetShop.Datas
                     owner.Pets.Add(pet);
                     ownerTwo.Pets.Add(petTwo);
                     
-                    context.SaveChanges();
+                    context.SaveChanges();*/
         }
     }
 }

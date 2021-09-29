@@ -1,41 +1,86 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using PetShop.Core.Filtering;
 using PetShop.Core.Models;
 using PetShop.Datas.Convertor;
+using PetShop.Datas.Entities;
 using PetShop.Domain.IRepositories;
 
 namespace PetShop.Datas.Repositories
 {
-    public class PetRepository : IPetRepository
+    public class PetRepository : IPetRepository, IPetConvertor
     {
         private readonly PetShopContext _context;
-        private readonly PetConvertor _convertorPet;
 
-        public PetRepository(PetShopContext context, PetConvertor petConvertor)
+        public PetRepository(PetShopContext context)
         {
             _context = context;
-            _convertorPet = petConvertor;
         }
         
         public IEnumerable<Pet> ReadPets(Filter filter)
         {
-            if (filter == null)
-            {
-                return _context.Pets.Include(p => p.Owner).Include(p => p.Type)
-                    .Select(pe => new Pet()
+            
+            var selectQuery = _context.Pets.
+                Select(petEntity => new Pet()
+                {
+                    Id = petEntity.Id,
+                    Name = petEntity.Name,
+                    Birthdate = petEntity.Birthdate,
+                    SoldDate = petEntity.SoldDate,
+                    Type = new PetType()
                     {
-                        
-                    });
+                        Id = petEntity.PetType.Id,
+                        Name = petEntity.PetType.Type,
+                    },
+                    Color = new PetColor()
+                    {
+                        Id = petEntity.Color.Id,
+                        Color = petEntity.Color.Color
+                    },
+                    Price = petEntity.Price,
+                    Owner = new Owner()
+                    {
+                        Id = petEntity.Owner.Id,
+                        FirstName = petEntity.Owner.FirstName,
+                        LastName = petEntity.Owner.LastName,
+                        PhoneNumber = petEntity.Owner.PhoneNumber,
+                        Email = petEntity.Owner.Email,
+                    }
+                
+                });
+            
+            var paging = selectQuery.
+                Skip(filter.Count * (filter.Page - 1)).
+                Take(filter.Count);
+
+            if (string.IsNullOrEmpty(filter.Sortorder) || filter.Sortorder.Equals("asc"))
+            {
+                paging = filter.SortBy switch
+                {
+                    "id" => paging.OrderBy(p => p.Id),
+                    "name" => paging.OrderBy(p => p.Name),
+                    "price" => paging.OrderBy(p => p.Price),
+                    _ => paging.OrderBy(p => p.Name)
+                };
+            }
+            else
+            {
+                paging = filter.SortBy switch
+                {
+                    "id" => paging.OrderBy(p => p.Id),
+                    "name" => paging.OrderBy(p => p.Name),
+                    "price" => paging.OrderBy(p => p.Price),
+                    _ => paging.OrderBy(p => p.Name)
+                };
             }
 
-            return _context.Pets
-                .Skip((filter.CurrentPage - 1) * filter.ItemsPerPage)
-                .Take(filter.ItemsPerPage)
-                .Select(pe => new Pet()
-                {
-                    
-                });
+            if (!string.IsNullOrEmpty(filter.Search))
+            {
+                paging = paging.Where(p => p.Name.ToLower().Contains(filter.Search.ToLower()));
+            }
+
+            return paging.ToList();
 
         }
 
@@ -46,12 +91,7 @@ namespace PetShop.Datas.Repositories
 
         public Pet CreatePet(Pet petToBeCreated)
         {
-            /*var pet = _context.Pets.Add(petToBeCreated).Entity;
-            var ownerOfPet = _context.Owners.Where(owner => owner.Id == pet.Id);
-            _context.Owners.Find(ownerOfPet).Pets.Add(pet);
-            _context.SaveChanges();
-            return pet;*/
-            var petEntity = _convertorPet.PetConvert(petToBeCreated);
+            var petEntity = PetConvert(petToBeCreated);
             _context.Pets.Attach(petEntity).State = EntityState.Added;
             _context.SaveChanges();
             return petToBeCreated;
@@ -69,7 +109,7 @@ namespace PetShop.Datas.Repositories
 
         public Pet FindPetById(int idForEdit)
         {
-            return _context.Pets.Select(p => new Pet(){}).FirstOrDefault(pet => pet.Id == idForEdit);
+            return _context.Pets.Select(PetEntityConvertor).FirstOrDefault(pet => pet.Id == idForEdit);
         }
 
         public Pet UpdatePet(Pet pet)
@@ -85,9 +125,50 @@ namespace PetShop.Datas.Repositories
             throw new System.NotImplementedException();
         }
 
-        public IEnumerable<Pet> GetCheapestPets()
+        public Pet GetCheapestPets()
         {
-            throw new System.NotImplementedException();
+            return ReadPets(null).Min();
+        }
+
+        public int TotalPetCount()
+        {
+            return _context.Pets.Count();
+        }
+
+        public Pet PetEntityConvertor(PetEntity petEntity)
+        {
+            return new Pet()
+            {
+                Id = petEntity.Id,
+                Name = petEntity.Name,
+                Birthdate = petEntity.Birthdate,
+                SoldDate = petEntity.SoldDate,
+                Type = new PetType()
+                {
+                    Id = petEntity.PetType.Id,
+                    Name = petEntity.PetType.Type,
+                },
+                Color = new PetColor()
+                {
+                    Id = petEntity.Color.Id,
+                    Color = petEntity.Color.Color
+                },
+                Price = petEntity.Price,
+                Owner = new Owner()
+                {
+                    Id = petEntity.Owner.Id,
+                    FirstName = petEntity.Owner.FirstName,
+                    LastName = petEntity.Owner.LastName,
+                    PhoneNumber = petEntity.Owner.PhoneNumber,
+                    Email = petEntity.Owner.Email,
+                }
+                
+            };
+        }
+
+        public PetEntity PetConvert(Pet pet)
+        {
+            return new PetEntity();
         }
     }
 }

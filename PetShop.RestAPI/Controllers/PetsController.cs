@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using PetShop.Core.Filtering;
 using PetShop.Core.IServices;
 using PetShop.Core.Models;
 using PetShop.RestAPI.Dto;
+using BadRequestResult = Microsoft.AspNet.Mvc.BadRequestResult;
 
 namespace PetShop.RestAPI.Controllers
 {
@@ -24,7 +26,12 @@ namespace PetShop.RestAPI.Controllers
         {
             try
             {
-                return Ok(_petService.GetFilteredPets(filter).Select(p => new PetReadAllDto{ Id = p.Id, Name = p.Name , Price = p.Price}));
+                var totalCount = _petService.GetTotalPetCount();
+                return Ok(_petService.GetPets(filter).Select(p => new PetReadAllDto {Id = p.Id, Name = p.Name, Price = p.Price}));
+            }
+            catch (ArgumentException e)
+            {
+                return BadRequest(e.Message);
             }
             catch (Exception e)
             {

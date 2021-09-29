@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using PetShop.Core.Filtering;
 using PetShop.Core.IServices;
 using PetShop.Core.Models;
 using PetShop.Domain.IRepositories;
@@ -18,9 +19,21 @@ namespace PetShop.Domain.Services
             _petRepository = petRepository;
         }
         
-        public List<Pet> GetPets()
+        public List<Pet> GetPets(Filter filter)
         {
-            return _petRepository.ReadPets(null).ToList();
+            if (filter.Count is <= 0 or > 500)
+            {
+                throw new ArgumentException("You need to put a filter count between 1 and 500");
+            }
+
+            var totalCount = _petRepository.TotalPetCount();
+            if (filter.Count * (filter.Page - 1) > totalCount)
+            {
+                throw new ArgumentException("An error occured");
+            }
+            
+            
+            return _petRepository.ReadPets(filter).ToList();
         }
 
         public List<Pet> GetFilteredPetsByType(string idPetType)
@@ -31,21 +44,6 @@ namespace PetShop.Domain.Services
             }
 
             return null;
-        }
-
-        public List<Pet> GetFilteredPets(Filter filter)
-        {
-            if (filter.CurrentPage < 0 || filter.ItemsPerPage < 0)
-            {
-                throw new InvalidDataException("CurrentPage and ItemsPerPage must be zero or more");
-            }
-
-            if ((filter.CurrentPage - 1 * filter.ItemsPerPage) >= _petRepository.ReadPets(null).Count())
-            {
-                throw new InvalidDataException("Index out of bounds. Current page is to high");
-            }
-
-            return _petRepository.ReadPets(filter.CurrentPage == 0 && filter.ItemsPerPage == 0 ? null : filter).ToList();
         }
 
         public Pet NewPet(string name, PetType type, string birthdate, string solddate, PetColor color, string price)
@@ -88,9 +86,14 @@ namespace PetShop.Domain.Services
             return _petRepository.SortByPrice(sortOrder);
         }
 
-        public List<Pet> GetCheapestPets()
+        public Pet GetCheapestPets()
         {
-            return _petRepository.GetCheapestPets().ToList();
+            return _petRepository.GetCheapestPets();
+        }
+
+        public int GetTotalPetCount()
+        {
+            return _petRepository.TotalPetCount();
         }
     }
 }

@@ -18,9 +18,11 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using PetShop.Core.Helpers;
 using PetShop.Core.IServices;
 using PetShop.Core.Models;
 using PetShop.Datas;
+using PetShop.Datas.Convertor;
 using PetShop.Datas.Repositories;
 using PetShop.Domain.IRepositories;
 using PetShop.Domain.Services;
@@ -84,6 +86,14 @@ namespace PetShop.RestAPI
             services.AddScoped<IPetTypeRepository, PetTypeRepository>();
             services.AddScoped<IOwnerService, OwnerService>();
             services.AddScoped<IOwnerRepository, OwnerRepository>();
+            services.AddScoped<IOwnerConvertor, OwnerRepository>();
+            services.AddScoped<IPetConvertor, PetRepository>();
+            services.AddScoped<IPetTypeConvertor, PetTypeRepository>();
+            services.AddScoped<IUserService,UserService>();
+            services.AddScoped<IMessageService,MessageService>();
+            services.AddScoped<IUserRepository,UserRepository>();
+            services.AddScoped<IMessageRepository,MessageRepository>();
+            //services.AddScoped<IAuthenticationHelper, AuthenticationHelper>();
 
             services.AddControllers().AddNewtonsoftJson(options=>
                 options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);

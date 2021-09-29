@@ -10,7 +10,7 @@ namespace PetShop.RestAPI.Controllers
     
     [ApiController]
     [Route("[controller]")]
-    public class RegisterUserController
+    public class RegisterUserController : ControllerBase
     {
         private readonly ILogger<UserController> _logger;
         private readonly IUserService _userService;

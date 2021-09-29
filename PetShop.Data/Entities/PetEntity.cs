@@ -8,7 +8,7 @@ namespace PetShop.Datas.Entities
         public int Id { get; set;}
         public string Name {get; set;}
         public int PetTypeId { get; set; }
-        public PetTypeEntity Type {get; set;}
+        public PetTypeEntity PetType {get; set;}
         public DateTime Birthdate {get; set;}
         public DateTime SoldDate {get; set;}
         public int ColorId { get; set; }

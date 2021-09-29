@@ -126,3 +126,4 @@ C:\Users\adamo\RiderProjects\PetShopDB\PetShop.RestAPI\bin\Debug\net5.0\Microsof
 C:\Users\adamo\RiderProjects\PetShopDB\PetShop.RestAPI\bin\Debug\net5.0\Json.Net.dll
 C:\Users\adamo\RiderProjects\PetShopDB\PetShop.RestAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\adamo\RiderProjects\PetShopDB\PetShop.RestAPI\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\adamo\RiderProjects\PetShopDB\PetShop.RestAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

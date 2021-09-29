@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using PetShop.Core.Filtering;
 using PetShop.Core.Models;
 
 namespace PetShop.Domain.IRepositories
@@ -12,6 +13,7 @@ namespace PetShop.Domain.IRepositories
         Pet FindPetById(int idForEdit);
         Pet UpdatePet(Pet pet);
         List<Pet> SortByPrice(string sortOrder);
-        IEnumerable<Pet> GetCheapestPets();
+        Pet GetCheapestPets();
+        int TotalPetCount();
     }
 }
