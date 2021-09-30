@@ -11,7 +11,7 @@ namespace PetShop.Datas.Entities
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
         
-        public int PetId { get; set; }
+        public int PetsId { get; set; }
         public List<PetEntity> Pets { get; set; }
     }
 }

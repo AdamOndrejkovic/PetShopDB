@@ -10,7 +10,7 @@ namespace PetShop.Core.Helpers
     public class AuthenticationHelper : IAuthenticationHelper
     {
 
-        private byte[] _secretBytes;
+        private readonly byte[] _secretBytes;
 
         public AuthenticationHelper(Byte[] secret)
         {

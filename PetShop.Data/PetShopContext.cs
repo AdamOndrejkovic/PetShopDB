@@ -69,5 +69,9 @@ namespace PetShop.Datas
         public DbSet<PetEntity> Pets { get; set; }
         public DbSet<PetTypeEntity> PetTypes { get; set; }
         public DbSet<OwnerEntity> Owners { get; set; }
+        
+        public DbSet<User> Users { get; set; }
+        
+        public DbSet<Message> Messages { get; set; }
     }
 }

@@ -57,9 +57,7 @@ namespace PetShop.RestAPI
                 options.TokenValidationParameters = new TokenValidationParameters()
                 {
                     ValidateAudience = false,
-                    //ValidAudience = "CoMetaApiClient",
                     ValidateIssuer = false,
-                    //ValidIssuer = "CoMetaApi",
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(secretBytes),
                     ValidateLifetime = true, //validate the expiration and not before values in the token
@@ -93,7 +91,7 @@ namespace PetShop.RestAPI
             services.AddScoped<IMessageService,MessageService>();
             services.AddScoped<IUserRepository,UserRepository>();
             services.AddScoped<IMessageRepository,MessageRepository>();
-            //services.AddScoped<IAuthenticationHelper, AuthenticationHelper>();
+            services.AddSingleton<IAuthenticationHelper>(new AuthenticationHelper(secretBytes));
 
             services.AddControllers().AddNewtonsoftJson(options=>
                 options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
