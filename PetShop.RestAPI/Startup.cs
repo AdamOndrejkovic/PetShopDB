@@ -64,6 +64,17 @@ namespace PetShop.RestAPI
                     ClockSkew = TimeSpan.FromMinutes(5) //5 minute tolerance for the expiration date
                 };
             });
+            
+            services.AddCors(options => 
+            {
+                options.AddPolicy("petshop-policy", builder =>
+                {
+                    builder.AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .WithOrigins("http://localhost:60135",
+                            "http://localhost:4200");
+                } );
+            });
 
             var loggerFactory = LoggerFactory.Create(builder =>
             {
@@ -127,11 +138,13 @@ namespace PetShop.RestAPI
                 app.UseHsts();
             }
 
-            //app.UseHttpsRedirection();
+            app.UseHttpsRedirection();
 
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors("petshop-policy");
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }

@@ -1,0 +1,100 @@
+﻿using System;
+using System.IO;
+using System.Security.Cryptography;
+
+namespace PetShop.Security.Encryption
+{
+    public class MyAESEncryptionService
+    {
+        private byte[] _key;
+        private byte[] _iv;
+        private AesCryptoServiceProvider _aes;
+
+        public MyAESEncryptionService()
+        {
+            _aes = new AesCryptoServiceProvider();
+            _key = _aes.Key;
+            _iv = _aes.IV;
+        }
+
+        public MyAESEncryptionService(string key, string iv)
+        {
+            _key = Convert.FromBase64String(key);
+            _iv = Convert.FromBase64String(iv);
+            _aes = new AesCryptoServiceProvider();
+            _aes.Key = _key;
+            _aes.IV = _iv;
+        }
+
+        public MyAESEncryptionService(byte[] key, out byte[] iv)
+        {
+            _key = key;
+            _aes = new AesCryptoServiceProvider();
+            _aes.Key = _key;
+            _aes.GenerateIV();
+            _iv = iv = _aes.IV;
+        }
+        
+        public MyAESEncryptionService(byte[] key, byte[] iv)
+        {
+            _key = key;
+            _iv = iv;
+            _aes = new AesCryptoServiceProvider();
+            _aes.Key = _key;
+            _aes.IV = _iv;
+        }
+
+        public byte[] EncryptMessage(string message)
+        {
+            byte[] encrypted;
+
+            ICryptoTransform encryptor = _aes.CreateEncryptor();
+
+            using (MemoryStream msEncrypt = new MemoryStream())
+            {
+                using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
+                {
+                    using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
+                    {
+                        swEncrypt.Write(message);
+                    }
+
+                    encrypted = msEncrypt.ToArray();
+                    msEncrypt.Flush();
+                }
+            }
+
+            return encrypted;
+        }
+
+        public string DecryptMessage(byte[] encryptedMessage)
+        {
+            string clearText;
+
+            ICryptoTransform decrypter = _aes.CreateDecryptor();
+            using (MemoryStream msDecrypt = new MemoryStream(encryptedMessage))
+            {
+                using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decrypter, CryptoStreamMode.Read))
+                {
+                    using (StreamReader srDecrypt = new StreamReader(csDecrypt))
+                    {
+                        clearText = srDecrypt.ReadToEnd();
+                    }
+                }
+            }
+
+            return clearText;
+        }
+
+        public string GetKey()
+        {
+            return Convert.ToBase64String(_key);
+        }
+
+        public string GetIV()
+        {
+            return Convert.ToBase64String(_iv);
+        }
+
+    }
+}
